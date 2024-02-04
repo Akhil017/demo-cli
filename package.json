@@ -1,12 +1,22 @@
 {
   "name": "practice-cli",
+  "bin": {
+    "practice": "./dist/index.js"
+  },
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "link": "pnpm unlink --global practice-cli && pnpm link --global",
+    "dev": "tsc -w",
+    "link-cli" : "pnpm link --global" ,
+    "unlink-cli": "pnpm uninstall --global practice-cli"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "typescript": "^5.3.3"
+  }
 }
